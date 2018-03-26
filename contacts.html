@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+
+	<meta name ="author" content="Kailas Shekar">
+	<meta name = "keywords" content = "Carnegie Mellon, Information Systems, resume">
+	<meta name = "description" content = "Kailas Shekar profession website">
+	
+	<link rel="stylesheet" media="all" type="text/css" href="css/styles.css">
+
+    <!-- link to the js files-->
+	<script type = "text/javascript" src = "js/scripts.js"></script>
+	<script type = "text/javascript" src = "js/jquery-3.3.1.min.js"></script>
+	<script src = "http://code.highcharts.com/highcharts.js"></script>
+	<script src = "http://code.highcharts.com/modules/exporting.js"></script>
+
+	<script type="text/javascript">
+		$(function (){
+			$('#container-graph').highcharts({
+
+			title: {
+		        text: 'Weekly Workload by Month',
+		    },
+
+		    subtitle: {
+		        text: 'Hours per week from 2015-2018',
+		    },
+
+		    xAxis: {
+		    	title: {
+		    		text: 'Months'
+		    	},
+		    	categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+		    },
+
+		    yAxis: {
+		        title: {
+		            text: 'Average hours worked each week'
+		    	},
+			},
+
+		    tooltip: {
+		    	valueSuffix: ' hours per week (on average)'
+
+		    },
+		  
+		    legend: {
+		        layout: 'vertical',
+		        align: 'right',
+		        verticalAlign: 'middle',
+		    },
+
+
+		    series: [{
+		        name: '2015',
+		        data: [2, 2, 5, 7, 7, 6, 5, 5, 4, 4, 4, 3]
+		    }, {
+		        name: '2016',
+		        data: [3, 4, 5, 6, 9, 11, 10, 13, 12, 11, 10, 8]
+		    }, {
+		        name: '2017',
+		        data: [4, 4, 5, 6, 9, 9, 8, 13, 10, 7, 6, 8]
+		    }, {
+		        name: '2018',
+		        data: [5, 6, 7, 8, 9, 11, 13, 15, 12, 11, 10, 8]
+		    }]
+
+		});
+	});
+	</script>
+
+</head>
+
+
+<body>
+	<div id = "container">
+
+		<div id="top_row">
+			<header>
+				<h1>Kailas Shekar</h1>
+				<h2>Carnegie Mellon University, Information Systems Program</h2>
+			</header>
+			
+			<nav>
+				<a href = "index.html">About</a>
+				<a href = "projects.html">Projects</a>
+				<a class = "selected" href = "contacts.html">Contact</a>
+			</nav>
+		</div>
+		
+		<div id = "content">
+			<h3>Contacts</h3>
+
+			<p>Please use the map below to find me</p>
+
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.438538023182!2d-79.94415570692836!3d40.44342982018961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f21f0b642f95%3A0xc30de693a6fd1a29!2sDonner+House!5e0!3m2!1sen!2sus!4v1521251128489" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<br><br>		
+			
+			<div id = "title">
+				<p>Please check to see when I'm free</p>
+			</div>
+			<div id ="container-graph"></div>
+		
+
+			<form onsubmit="return validate()">
+				<fieldset>
+		    		<legend>Tell me a bit about yourself:</legend>
+					<label>Name: </label>     <br/>
+			  		<input type="text" name="name" value="Your Name" size = "20" maxlength="250">    <br/>
+			  		<label>Your date of birth: </label>   <br/>
+			  		<input type= "text" name = "DoB" id="txtDoB" value ="mm/dd/yy" required="">   <br/>
+
+			  	</fieldset>
+
+			  	<fieldset>
+			  		<legend>Tell me about your preferences:</legend>
+			  		<label>Pick a color  </label><br>
+			  		<input type = "color">. <br>
+			  		<label>Message: </label>   <br>
+			  		<textarea type="text" name = "Message" rows = "10" cols ="50" maxlength="1000"></textarea>
+			  	</fieldset>
+
+			  	<fieldset>
+			  		<legend>Let's stay in touch...</legend>
+			  		<label>How did you hear about me?  </label><br>
+			  		<select name = "How">
+			  			<option value = "Google">Google</option>
+			  			<option value = "NewsArticle">News Article</option>
+			  			<option value = "Friend" selected>Through a friend</option>
+			  			<option value = "Other">Other</option>
+			  		</select> <br>
+			  		<br>
+			  		<label>Please Indicate if you want to receive updates via email </label><br> 
+			  		<input type = "checkbox" name = "Conctac" value = "EmailUpdates"> Yes, Please update me!<br><br>
+
+			  		<label>Please provide your email address  </label>  <br>
+			  		<input type="email" name="Email" placeholder="abc@defg.com" required pattern="[A-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$""> <br><br>
+
+			  		<label>Please enter your Phone number (Enter only the number with no dashes or spaces and include the area code)</label> <br>
+			  		<input type="text" name="number" id="phone" required= ""> <br><br>
+
+			  		<label>Choose a password  </label><br>
+			  		<input type="password" name="psw" maxlength="20">
+
+			  		<hr>
+			  		<input type="image" src="images/submit.png" alt="Submit">
+
+
+			  	</fieldset>
+
+			</form>
+		</div>
+
+		<div id = "sidebar">
+			<h3>Find Me</h3>
+			Kailas Shekar<br/>
+			<a href = "http://cmu.edu" target = "_blank">Carnegie Mellon University</a><br/>
+			500 Forbes Avenue<br/>
+			Pittsburgh, PA 15123<br/>
+			408-255-6301 (Home)<br/>
+			408-505-4806 (Cell)<br/>
+			<a href = "mailto:kshekar@andrew.cmu.edu"><img src = "images/email.png"></a>
+			<a href ="https://www.linkedin.com/in/kailas-shekar-295177142/"><img src = "images/linkedin.png"></a>		
+			<a href = "https://www.facebook.com/kailas.shekar"><img src = "images/facebook.png" alt = "facebook link"></a>
+
+		</div>
+		
+		<footer>
+			<hr/>
+			&copy; Kailas Shekar 2017</br>
+			<a href = "mailto:kshekar@andrew.cmu.edu">Email me</a>
+			<a href = "http://cmu.edu" target = "_blank">Carnegie Mellon University</a>
+		
+		</footer>
+	</div>	
+
+</body>
+
+</html>

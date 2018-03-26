@@ -1,0 +1,173 @@
+
+
+body {
+	font-family: "Helevetic Neue", Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	line-height: 1.7em;
+	color: #000000;	
+}
+
+#container { 
+	width: 100%;
+	margin: 10px;
+	/*border:  1px solid gray; */ 
+}
+
+#top_row {
+	border-bottom: 1px dotted #cccccc;
+	padding: .5em .5em 3em .5em;
+} 
+
+
+#top_row h1{
+	color: #0099ff;
+	font-size: 3.75em;
+	letter-spacing: -2px;
+}
+
+
+#top_row h2{
+	font-size: 1.125em;
+	font-weight: 200;
+}
+
+#top_row nav{
+	float: right;
+}
+
+#top_row nav a {
+	text-decoration: none;
+	font-size: 1.125em;
+	font-weight: 400;
+	padding: 15px;
+	color: #000000;   /*white color*/
+}
+
+#top_row nav a.selected{
+	background: #f6f6f6;
+	color: #bbbbbb;   /*gray color*/
+}
+
+#top_row nav a.selected:hover {
+	background: #f6f6f6;
+	color: #bbbbbb;       /*gray color*/
+
+}
+
+#top_row nav a:hover {
+	background: #f6f6f6;
+	color: #0099ff;
+}
+
+#content {
+	float: left;
+	width: 70%;
+	margin: 0;
+	padding: 1em;
+	border-right: 1px dotted #ccc;
+}
+
+
+#content h3 {
+	font-family: Georgia, serif;
+	font-size: 1.5em;
+	margin: 30px 0 10px 0;
+	font-weight: normal;
+} 
+
+#sidebar {
+	float: left;
+	padding: 1em;
+	font-size: .875em;
+}
+
+#sidebar h3 {
+	font-size: 1.125em;
+	border-bottom: 1px dotted #ccc;
+}
+
+#sidebar a:link{
+	color: #0099ff;
+	text-decoration: none;
+}
+
+#sidebar a:hover{
+	text-decoration: underline;
+}
+
+footer {
+	clear:both;  /* no element to the side of this, so bottom of the page*/
+	margin: 0;
+	padding:.5em;
+	color: #333333;
+	font-variant: small-caps;
+	font-size: .813em;
+	text-align: center;
+}
+
+#content img{
+	float:left;
+	margin:1em;
+}
+
+#bio {
+	margin-left:3em;
+	font-size:.875em;
+}
+
+#bio a{
+	text-decoration: none;
+	border-bottom:1px dotted #000;
+	color:#000;
+}
+
+#bio a:hover {
+	color:#0099ff;
+}
+
+#content table {
+	width: 75%;
+	border:3px solid #0099ff;
+	margin: 0 auto;
+	border-collapse: collapse;
+	table-layout: auto;
+}
+
+#content th{
+	font-style: bold;
+	height: 40px;
+}
+
+#content th, td{
+	padding: 8px;
+	text-align: center;
+	border: 1px solid #0099ff;
+}
+
+#content form{
+	width: 75%;
+	margin: 0 auto;
+	border: 1px solid #0099ff;
+	padding: 10px;
+}
+
+#content legend{
+	font-weight: bold;
+	text-align: center;
+	color: #666666;
+	margin: 5px;
+}
+
+#content label{
+	font-weight: bold;
+	text-align: center;
+}
+
+html{
+	overflow-y: scroll;
+}
+
+iframe {
+	display: block;
+	margin: auto;
+}
